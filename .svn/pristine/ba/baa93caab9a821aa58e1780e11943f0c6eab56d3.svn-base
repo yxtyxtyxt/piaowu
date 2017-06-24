@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>动漫漫圈子</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/manhua.css" />
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_wu27cqb8mlutmx6r.css" />
+	<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_wnolba4qcqlzyqfr.css"/>
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
+	<script src="../node_modules/amazeui-swiper/dist/amazeui.swiper.min.js"></script>
+	<script src="../iscroll-4/src/iscroll.js"></script>
+</head>
+<body>
+	<!--头部信息-->
+	  <header data-am-widget="header"
+          class="am-header am-header-default h_color">
+      <div class="am-header-left am-header-nav">
+          <a href="#left-link" class="">
+                <i class="iconfont icon-fanhui"></i>
+          </a>
+      </div>
+      <h1 class="am-header-title">
+          <a href="#title-link" class="">
+           	娱乐宝
+          </a>
+      </h1>
+      <div class="am-header-right am-header-nav">
+          <a href="#right-link" class="">
+                <i class="iconfont icon-gerenzhongxin"></i>
+          </a>
+      </div>
+  </header>
+<!--中间部分-->
+<div id="wrapper">
+	<div id="scroller">
+  <div id="content">
+  	<!--幻灯片-->
+  	<div class="swiper-container" id="mySwiper"> 
+  		<div class="swiper-wrapper"> 
+  			<div class="swiper-slide"><img src="../images/mPic/1.jpg" alt="" /></div>
+  			<div class="swiper-slide"><img src="../images/mPic/2.jpg" alt="" /></div> 
+  			<div class="swiper-slide"><img src="../images/mPic/3.jpg" alt="" /></div>
+  		</div>
+  		<div class="swiper-pagination"></div> 
+  		
+  	</div> 
+  	<!-- 列表菜单 -->
+  		<div id="list">
+  			<!-- 未添加 .am-u-end 的情形 -->
+				<div class="am-g">
+				  <div class="am-u-sm-4">
+				  	<a href="#">
+				  		<img src="../images/mPic/9.jpg" alt="">
+				  	</a>
+				  	<p class="yp">灵契</p>
+				  	<p>阳冥师与影灵成长史阳冥师与影灵成长史</p>
+				  </div>
+				  <div class="am-u-sm-4">
+				  	<a href="#">
+				  		<img src="../images/mPic/10.jpg" alt="">
+				  	</a>
+				  	<p class="yp">阴阳师</p>
+				  	<p>逆天改命，顺应而生，重重阻难</p>
+				  </div>
+				  <div class="am-u-sm-4">
+				  	<a href="#">
+				  		<img src="../images/mPic/11.jpg" alt="">
+				  	</a>
+				  	<p class="yp">胖砸故事</p>
+				  	<p>胖乎乎的鬼要怎么吓人胖乎乎的鬼要怎么吓人</p>
+				  </div>				
+				  <div class="am-u-sm-4">
+				  	<a href="#">
+				  		<img src="../images/mPic/12.jpg" alt="">
+				  	</a>
+				  	<p class="yp">特工</p>
+				  	<p>战斗永相随,誓死收回你战斗永相随,誓死收回你</p>
+				  </div>
+				  <div class="am-u-sm-4">
+				  	<a href="#">
+				  		<img src="../images/mPic/13.jpg" alt="">
+				  	</a>
+				  	<p class="yp">大姐姐</p>
+				  	<p>快快乐乐嘻嘻哈哈快快乐乐嘻嘻哈哈</p>
+				  </div>
+				  <div class="am-u-sm-4">
+				  	<a href="#">
+				  		<img src="../images/mPic/14.jpg" alt="">
+				  	</a>
+				  	<p class="yp">一生</p>
+				  	<p>一生相依，伴你左右一生相依，伴你左右</p>
+				  </div>				
+  				</div>
+  </div>
+  </div> 		
+	</div>
+</div>
+		<!--底部-->
+  		<footer id="fott">
+  			<div class="fbox">
+  				<a href="dong_info.html" class="iconfont icon-dongman"></a>
+  				<i>动漫</i>
+  			</div>
+  			<div class="fbox">
+  				<a href="ball.html" class="iconfont icon-lanqiu1"></a>
+  				<i>篮球</i>
+  			</div>
+  			<div class="fbox">
+  				<a href="video.html" class="iconfont icon-shipin1"></a>
+  				<i>视频</i>
+  			</div>
+  			<div class="fbox">
+  				<a href="index" class="iconfont icon-quanzi"></a>
+  				<i>新闻</i>
+  			</div>
+        </footer>
+  <script>
+  	$(function() {
+		var	myScroll = new iScroll('wrapper');
+		$('#mySwiper').swiper({
+			pagination: '#mySwiper .swiper-pagination',
+			paginationClickable: true, 
+			autoplay:3000
+		});
+	 
+  	});
+  </script>
+  
+  <!--
+  	figure 存放图片
+    figcaption  标题
+  -->
+  
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>动漫漫圈子</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/new.css" />
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_wu27cqb8mlutmx6r.css" />
+	<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_wnolba4qcqlzyqfr.css"/>
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
+	<script src="../node_modules/amazeui-swiper/dist/amazeui.swiper.min.js"></script>
+	<script src="../iscroll-4/src/iscroll.js"></script>
+</head>
+<body>
+	<!--头部信息-->
+	  <header data-am-widget="header"
+          class="am-header am-header-default h_color">
+      <div class="am-header-left am-header-nav">
+          <a href="#left-link" class="">
+                <i class="iconfont icon-fanhui"></i>
+          </a>
+      </div>
+      <h1 class="am-header-title">
+          <a href="#title-link" class="">
+           	票务快手
+          </a>
+      </h1>
+      <div class="am-header-right am-header-nav">
+          <a href="#right-link" class="">
+                <i class="iconfont icon-gerenzhongxin"></i>
+          </a>
+      </div>
+  </header>
+<!--中间部分-->
+<section>
+	<video src="../video/LuHan鹿晗_Roleplay_Dance Performance Video.mp4" ></video>   <!--class="animated fadeIn"-->
+		<div class="func">
+			<i class="btnPlay iconfont icon-weibiaoti1"></i>
+			<span>
+				<input type="range" class="playTime" value="0"/>
+			</span>
+			<i class="muted iconfont icon-yinliang"></i>
+			<i class="fullscreen iconfont icon-quanping"></i>
+		</div>
+</section>
+		<!--底部-->
+  		<footer id="fott">
+  			<div class="fbox">
+  				<a href="dong_info.html" class="iconfont icon-dongman"></a>
+  				<i>动漫</i>
+  			</div>
+  			<div class="fbox">
+  				<a href="index.html" class="iconfont icon-lanqiu1"></a>
+  				<i>篮球</i>
+  			</div>
+  			<div class="fbox">
+  				<a href="video.html" class="iconfont icon-shipin1"></a>
+  				<i>视频</i>
+  			</div>
+  			<div class="fbox">
+  				<a href="index" class="iconfont icon-quanzi"></a>
+  				<i>新闻</i>
+  			</div>
+        </footer>
+  <script>
+  var video = $("video");
+			//***********播放、暂停***********
+			 $('.btnPlay').on('click', function() {
+			   if(video[0].paused) {
+			       video[0].play();
+			       $(this).toggleClass("icon-zanting").toggleClass("icon-weibiaoti1");
+			   }else {
+			       video[0].pause();
+			       $(this).toggleClass("icon-weibiaoti1").toggleClass("icon-zanting");
+			   }
+			    return false;
+			});
+     		//***********静音效果***********
+			var flag = true; 
+        	$('.muted').on('click', function() {
+			   if(flag) {
+			       video[0].muted = true;  //true实现静音
+	      		   video[0].volume = 1; 
+	      		   flag = false;
+			       $(this).toggleClass("icon-jingyin").toggleClass("icon-yinliang");
+			   }else {
+			      video[0].muted = false;  //false不能实现静音
+			      video[0].volume = 1; 
+			      flag = true;
+			      $(this).toggleClass("icon-yinliang").toggleClass("icon-jingyin");
+			   }
+			    
+			});
+			//**********全屏功能***********
+        	$(".fullscreen").on("click",function(){
+        		video[0].webkitRequestFullScreen();       		
+        	});
+        	//***********退出全屏***********
+        	$("video").on("click",function(){
+        		video[0].webkitEnterFullScreen();      		
+        	});
+        	//***********进度条***********
+        	var allTime = video[0].duration; //获取视频总时长
+        	$(".playTime").attr({
+        		max:allTime
+        	});
+        	$(".playTime").on("input",function(){
+        		//获取到定位处的时间
+        		//console.log( $(".playTime").val());
+        		//拖动进度条的时候，把播放时间赋给当前时间
+        		video[0].currentTime = $(".playTime").val();        		
+        	});
+        	video[0].addEventListener("timeupdate",function(){
+        		setInterval(function(){
+        			var playTimer = parseInt(video[0].currentTime);
+        			console.log(playTimer);
+        			$(".playTime").val(playTimer);
+        		},1000)
+        	})
+        	//  animate动画效果
+        	$.fn.extend({
+	        	animateCss: function (animationName) {
+			        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+			        this.addClass('animated ' + animationName).one(animationEnd, function() {
+			            $(this).removeClass('animated ' + animationName);
+			        });
+			    }
+	        })
+	        	$(".btnPlay").on("click",function(){
+	        		video.animateCss("tada");
+        	})
+
+		</script>
+  
+  <!--
+  	figure 存放图片
+    figcaption  标题
+  -->
+  
+</body>
+</html>

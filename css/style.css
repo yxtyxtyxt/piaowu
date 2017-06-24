@@ -1,0 +1,5 @@
+/* 请求次数不同 import 请求一个多个文件 */
+@import url("../css/normalize.css");
+@import url("http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css");
+@import url("../node_modules/amazeui-swiper/dist/amazeui.swiper.min.css");
+@import url("../css/manhua.css");

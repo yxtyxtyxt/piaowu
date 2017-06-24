@@ -1,0 +1,43 @@
+.h_color{
+	background:#62e49e!important;
+}
+
+.t_left{
+	margin-left:2.2rem;
+	font-size: 20px;
+}
+.iconfont{
+	font-size: 22px!important;
+}
+#wrapper{
+	height: calc(100vh - 108px);
+}
+#bg_pic{
+	background: url(../images/mPic/bg.jpg) no-repeat;
+	overflow: hidden;
+	background-size: cover;
+}
+.am-intro-right p{
+	color:#FFF;
+}
+.am-intro-right .p_title{
+	font-size: 1.5rem;
+	font-weight: 800;
+	margin-top:0.8rem;
+}
+.am-intro-right .cont{
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	margin: 0 0 1rem 0;
+}
+
+
+
+
+
+
+footer{
+height:59px;
+background: url(../images/img/footer.png) no-repeat ;
+background-size: 100%;	
+}

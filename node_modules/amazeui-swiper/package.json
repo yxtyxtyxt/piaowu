@@ -1,0 +1,109 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "amazeui-swiper",
+        "scope": null,
+        "escapedName": "amazeui-swiper",
+        "name": "amazeui-swiper",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\wamp\\www\\day08\\manhua"
+    ]
+  ],
+  "_from": "amazeui-swiper@latest",
+  "_id": "amazeui-swiper@0.0.5",
+  "_inCache": true,
+  "_location": "/amazeui-swiper",
+  "_nodeVersion": "6.2.2",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/amazeui-swiper-0.0.5.tgz_1467792985623_0.386516789207235"
+  },
+  "_npmUser": {
+    "name": "minwe",
+    "email": "hegfirose@gmail.com"
+  },
+  "_npmVersion": "3.10.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "amazeui-swiper",
+    "scope": null,
+    "escapedName": "amazeui-swiper",
+    "name": "amazeui-swiper",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/amazeui-swiper/-/amazeui-swiper-0.0.5.tgz",
+  "_shasum": "d0d0ab3c489d7cd2648a96aee761433fe62706ec",
+  "_shrinkwrap": null,
+  "_spec": "amazeui-swiper",
+  "_where": "C:\\wamp\\www\\day08\\manhua",
+  "author": {
+    "name": "minwe",
+    "email": "minwe@yunshipei.com"
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery"
+  },
+  "bugs": {
+    "url": "https://github.com/amazeui/swiper/issues"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "swiper": "^3.3.1"
+  },
+  "description": "Swiper 轮播插件 Amaze UI 风格",
+  "devDependencies": {
+    "amazeui": "^2.7.0",
+    "amazeui-doc-util": "latest",
+    "amazeui-gulp-tasks": "latest",
+    "browserify": "^13.0.1",
+    "browserify-shim": "^3.8.12",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.2.4",
+    "run-sequence": "^1.2.2"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "d0d0ab3c489d7cd2648a96aee761433fe62706ec",
+    "tarball": "https://registry.npmjs.org/amazeui-swiper/-/amazeui-swiper-0.0.5.tgz"
+  },
+  "gitHead": "c203e6b722a718f46ba93fa52dfd62916952cc2f",
+  "homepage": "https://github.com/amazeui/swiper",
+  "keywords": [
+    "amazeui-plugin",
+    "amaze-ui",
+    "AMUI",
+    "swiper",
+    "jquery-swiper",
+    "jquery-plugin"
+  ],
+  "license": "MIT",
+  "main": "lib/amazeui.swiper.js",
+  "maintainers": [
+    {
+      "name": "minwe",
+      "email": "hegfirose@gmail.com"
+    }
+  ],
+  "name": "amazeui-swiper",
+  "optionalDependencies": {},
+  "readme": "# Amaze UI Swiper\n---\n\n[![NPM version](https://img.shields.io/npm/v/amazeui-swiper.svg?style=flat-square)](https://www.npmjs.com/package/amazeui-swiper)\n[![Dependency Status](https://img.shields.io/david/amazeui/swiper.svg?style=flat-square)](https://david-dm.org/amazeui/swiper)\n[![devDependency Status](https://img.shields.io/david/dev/amazeui/swiper.svg?style=flat-square)](https://david-dm.org/amazeui/swiper#info=devDependencies)\n\n[Swiper 插件](https://github.com/nolimits4web/Swiper) jQuery 封装。\n\n- [使用示例](http://amazeui.github.io/swiper/docs/demo.html)\n- [API 文档](http://amazeui.github.io/swiper/docs/api.html)\n\n**使用说明：**\n\n1. 获取 Amaze UI Swiper\n\n  - [直接下载](https://github.com/amazeui/swiper/archive/master.zip)\n  - 使用 NPM: `npm install amazeui-swiper`\n\n2. 引入 Swiper 样式（位于 `dist` 目录下的 CSS）：\n\n  ```html\n  <link rel=\"stylesheet\" href=\"path/to/amazeui.swiper.min.css\"/>\n  ```\n\n3. 在 jQuer 后面引入 Swiper 插件（位于 `dist` 目录下）：\n\n  ```html\n  <script src=\"path/to/jquery.min.js\"></script>\n  <script src=\"path/to/amazeui.swiper.min.js\"></script>\n  ```\n\n4. 添加 HTML 结构\n\n  根据情况可以删除一些不必要的标记。\n\n  ```html\n  <!-- Slider main container -->\n  <div class=\"swiper-container\">\n      <!-- Additional required wrapper -->\n      <div class=\"swiper-wrapper\">\n          <!-- Slides -->\n          <div class=\"swiper-slide\">Slide 1</div>\n          <div class=\"swiper-slide\">Slide 2</div>\n          <div class=\"swiper-slide\">Slide 3</div>\n          ...\n      </div>\n      <!-- If we need pagination -->\n      <div class=\"swiper-pagination\"></div>\n\n      <!-- If we need navigation buttons -->\n      <div class=\"swiper-button-prev\"></div>\n      <div class=\"swiper-button-next\"></div>\n\n      <!-- If we need scrollbar -->\n      <div class=\"swiper-scrollbar\"></div>\n  </div>\n  ```\n\n5. 根据需要设置 Swiper 尺寸\n\n  ```css\n  .swiper-container {\n      width: 600px;\n      height: 300px;\n  }\n  ```\n\n6. 初始化 swiper:\n\n  ```js\n  $(function() {\n      $('#mySwiper').swiper();\n  });\n  ```\n\n## 常见问题\n\n### 点击特定 Swiper 导航的时候所有 Swiper 一起跟着动？\n\n将分页和上下导航的选择符改为不同的 class 或 id 即可。\n\n不知道作者为何这样设计，绑定事件的时候[没有设定选择符的上下文](https://github.com/nolimits4web/Swiper/blob/7de949b42547ee28b430df31185b6617cd0a4c4a/src/js/core.js#L948-L959)，如果选择符相同，就会选择到所有的 swiper。\n\n```js\n$('#demo27').swiper({\n  nextButton: '.swiper-button-next',\n  prevButton: '.swiper-button-prev',\n  pagination: '.swiper-pagination',\n});\n```\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amazeui/swiper.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "style": "dist/amazeui.swiper.css",
+  "version": "0.0.5"
+}

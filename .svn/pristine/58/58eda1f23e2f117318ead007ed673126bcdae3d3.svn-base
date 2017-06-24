@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<!--视网膜屏幕  meta:vp 正常比例显示，不会被压缩-->
+		<!--修改页面缩放比例，整体压缩，但是字体模糊-->
+		<title></title>
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/swiper.min.css" />
+		<!--css初始化 渐进增强：小而精项目  优雅降级：大而全的项目  兼容性-->		
+		<link rel="stylesheet" href="http://at.alicdn.com/t/font_wu27cqb8mlutmx6r.css" />
+		<script src="../js/swiper.min.js"></script>
+	</head>
+	<body>
+		<!--头部导航栏高度 44px-->
+		<header>
+			<a href="#" class="iconfont icon-fanhui"></a>
+			<h1>票务快手</h1>
+			<a href="#" class="iconfont icon-gerenzhongxin"></a>
+		</header>
+		<!--底部标签栏高度49px-->
+		<section>
+			<!--幻灯片-->
+			<div class="swiper-container s_img">
+			  <div class="swiper-wrapper">
+			    <div class="swiper-slide"><img src="../images/img/banner.jpg" alt="" /></div>
+			    <div class="swiper-slide"><img src="../images/img/banner.jpg" alt="" /></div>
+			    <div class="swiper-slide"><img src="../images/img/banner.jpg" alt="" /></div>
+			  </div>
+			  <div class="swiper-pagination"></div>
+			</div>
+			<!--球类-->
+			<div class="swiper-container s_fen">
+			  <div class="swiper-wrapper">
+			    <div class="swiper-slide">
+				    	<a href="#" style="background: #ff7d11;">
+				    		<i class="iconfont icon-football"></i>			  
+				    	</a>
+			    	<a href="#" style="background: #df3901;">
+			    		<i class="iconfont icon-lanqiu"></i>
+			    		<!--<b>篮球</b>-->
+			    	</a>
+			    	<a href="#" style="background: #d582ee;">
+			    		<i class="iconfont icon-yumaoqiu"></i>
+			    		<!--<b>羽毛球</b>-->
+			    	</a>
+			    	<a href="#" style="background: #5fced5;">
+			    		<i class="iconfont icon-pingpangqiu"></i>
+			    		<!--<b>乒乓球</b>-->
+			    	</a>
+			    	<a href="#" style="background: #b282ee;">
+			    		<i class="iconfont icon-yundong"></i>
+			    		<!--<b>健身</b>-->
+			    	</a>
+			    	<a href="#" style="background: #ffb504;">
+			    		<i class="iconfont icon-yuqie"></i>
+			    		<!--<b>瑜伽</b>-->
+			    	</a>
+			    	<a href="#" style="background: #0fb6ff;">
+			    		<i class="iconfont icon-ic_pool_px"></i>
+			    		<!--<b>游泳</b>-->
+			    	</a>
+			    	<a href="#" style="background: #ff9ed4;">
+			    		<i class="iconfont icon-zixingche"></i>				
+			    	</a>			    	
+			    </div>
+			    <div class="swiper-slide">
+			    	<a href="#" style="background: #ff7d11;">
+			    		<i class="iconfont icon-football"></i>
+			    	</a>
+			    	<a href="#" style="background: #df3901;">
+			    		<i class="iconfont icon-lanqiu"></i>
+			    	</a>
+			    	<a href="#" style="background: #d582ee;">
+			    		<i class="iconfont icon-yumaoqiu"></i>
+			    	</a>
+			    	<a href="#" style="background: #5fced5;">
+			    		<i class="iconfont icon-pingpangqiu"></i>
+			    	</a>
+			    	<a href="#" style="background: #b282ee;">
+			    		<i class="iconfont icon-yundong"></i>
+			    	</a>
+			    	<a href="#" style="background: #ffb504;">
+			    		<i class="iconfont icon-yuqie"></i>
+			    	</a>
+			    	<a href="#" style="background: #0fb6ff;">
+			    		<i class="iconfont icon-ic_pool_px"></i>
+			    	</a>
+			    	<a href="#" style="background: #ff9ed4;">
+			    		<i class="iconfont icon-zixingche"></i>
+			    	</a>
+			    </div>
+			    <div class="swiper-slide">
+			    	<a href="#" style="background: #ff7d11;">
+			    		<i class="iconfont icon-football"></i>
+			    	</a>
+			    	<a href="#" style="background: #df3901;">
+			    		<i class="iconfont icon-lanqiu"></i>
+			    	</a>
+			    	<a href="#" style="background: #d582ee;">
+			    		<i class="iconfont icon-yumaoqiu"></i>
+			    	</a>
+			    	<a href="#" style="background: #5fced5;">
+			    		<i class="iconfont icon-pingpangqiu"></i>
+			    	</a>
+			    	<a href="#" style="background: #b282ee;">
+			    		<i class="iconfont icon-yundong"></i>
+			    	</a>
+			    	<a href="#" style="background: #ffb504;">
+			    		<i class="iconfont icon-yuqie"></i>
+			    	</a>
+			    	<a href="#" style="background: #0fb6ff;">
+			    		<i class="iconfont icon-ic_pool_px"></i>
+			    	</a>
+			    	<a href="#" style="background: #ff9ed4;">
+			    		<i class="iconfont icon-zixingche"></i>
+			    	</a>
+			    </div>			    
+			</div>
+			<div class="swiper-pagination"></div>
+			</div>
+			<!--足球场-->
+			<div class="swiper-container s_jie">
+			  <div class="swiper-wrapper">
+			    <div class="swiper-slide">
+			    	<dl>
+			    		<dt>
+			    			<img src="../images/img/qiu.jpg" alt="" />
+			    		</dt>
+			    		<dd>
+			    			<p>长春体育场冬季开馆时间公布</p>
+			    			<p>应广大群众的要求，长春体育场冬季开馆时<br/>9:00-18:00</p>			 
+			    		</dd>
+			    	</dl>
+			    </div>
+			    <!--<div class="swiper-slide"></div>
+			    <div class="swiper-slide"></div>-->
+			  </div>
+			 <!--<div class="swiper-pagination"></div>-->
+			</div>
+			<!--广告栏-->
+			<div class="swiper-container s_ad">
+			  <div class="swiper-wrapper">
+			    <div class="swiper-slide"><img src="../images/img/ad.jpg" alt="" /></div>
+			    <div class="swiper-slide"><img src="../images/img/ad.jpg" alt="" /></div>
+			    <div class="swiper-slide"><img src="../images/img/ad.jpg" alt="" /></div>
+			  </div>
+			  <div class="swiper-pagination"></div>
+			</div>
+		</section>
+		
+		<!--尾部标签栏高度 49px-->
+		<footer> 
+        <div id="box">
+            <ul>
+                <li>
+                    <a class="iconfont icon-hongqi1"></a>
+                    <em>头条</em>
+                </li>
+                <li>
+                     <a class="iconfont icon-quanzi" href="dongman.html"> </a>
+                     <em>圈子</em>
+                </li>
+                <li id="sportImgBox"> </li>
+                <li>
+                     <a class="iconfont icon-shipin" href="video.html"> </a>
+                     <em>视频</em>
+                </li>
+                <li>
+                     <a class="iconfont icon-dinggou"> </a>
+                     <em>订购</em>
+                </li>
+            </ul>
+        </div>
+    </footer>
+		
+		<script>
+			var mySwiper = new Swiper('.s_img', {
+				autoplay: 2000,//可选选项，自动滑动
+				pagination : '.swiper-pagination',
+				loop:true
+			});
+			var mySwiper = new Swiper(".s_fen",{
+	            pagination : '.swiper-pagination', //分页器
+	            paginationClickable :true, //可以点击的分页器
+	            loop:true  // looper 环形使者  transformer
+        	});
+        	var mySwiper = new Swiper('.s_ad', {
+				autoplay: 3000,//可选选项，自动滑动
+				pagination : '.swiper-pagination',
+				loop:true
+			})
+        
+		</script>
+	</body>
+</html>

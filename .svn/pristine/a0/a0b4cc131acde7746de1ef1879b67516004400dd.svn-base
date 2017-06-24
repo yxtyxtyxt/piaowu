@@ -1,0 +1,55 @@
+.h_color{
+	background:#62e49e!important;	
+}
+.am-header-default a{
+	color: #fff!important;
+}
+.iconfont{
+	color: #fff;
+	font-size: 1.8rem!important;
+}
+a:hover{
+	color:#fff
+}
+header{
+	height: 0.88rem; 
+}
+section{
+	height: calc(100vh - 98px);	
+}
+section video{
+	width:100%;
+}
+section .func{
+	background:#888;
+	width:100%;
+	height:2.8rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+section .func span{
+	display: flex;
+	width:10rem;
+}
+section .func span>input{
+	width:100%;	
+}
+
+#fott{
+	width:100%;
+	height:51px;
+	background: #62e49e;
+	display: flex;
+	justify-content: space-around;
+}
+#fott .fbox{
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+}
+#fott .fbox>i{
+	font-style: normal;
+	color: #fff;
+	font-size: 1.4rem;
+}

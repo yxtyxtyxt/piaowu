@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<!--视网膜屏幕  meta:vp 正常比例显示，不会被压缩-->
+		<!--修改页面缩放比例，整体压缩，但是字体模糊-->
+		<title></title>
+		<link rel="stylesheet" href="../css/video.css" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/swiper.min.css" />
+		<link rel="stylesheet" href="../css/animate.min.css" />
+		<!--css初始化 渐进增强：小而精项目  优雅降级：大而全的项目  兼容性-->		
+		<link rel="stylesheet" href="http://at.alicdn.com/t/font_wu27cqb8mlutmx6r.css" />
+		<link rel="stylesheet" href="http://at.alicdn.com/t/font_4n7tjvvdwrmdvx6r.css" />
+		<script src="../js/swiper.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+	</head>
+	<body>
+		<!--头部导航栏高度 44px-->
+		<header>
+			<a href="#" class="iconfont icon-fanhui"></a>
+			<h1>票务快手</h1>
+			<a href="#" class="iconfont icon-gerenzhongxin"></a>
+		</header>		
+			
+		<!--中间部分-->
+		<section>
+			<video src="../video/LuHan鹿晗_Roleplay_Dance Performance Video.mp4" ></video>   <!--class="animated fadeIn"-->
+			<div class="func">
+				<i class="btnPlay iconfont icon-weibiaoti1"></i>
+				<span>
+					<input type="range" class="playTime" value="0"/>
+				</span>
+				<i class="muted iconfont icon-yinliang"></i>
+				<i class="fullscreen iconfont icon-quanping"></i>
+			</div>
+		</section>
+					
+		<!--尾部标签栏高度 49px-->
+		<footer>
+        <div id="box">
+            <ul>
+                <li>
+                    <a class="iconfont icon-hongqi1"></a>
+                    <em>头条</em>
+                </li>
+                <li>
+                     <a class="iconfont icon-quanzi"> </a>
+                     <em>圈子</em>
+                </li>
+                <li id="sportImgBox"> </li>
+                <li>
+                     <a class="iconfont icon-shipin"> </a>
+                     <em>视频</em>
+                </li>
+                <li>
+                     <a class="iconfont icon-dinggou"> </a>
+                     <em>订购</em>
+                </li>
+            </ul>
+        </div>
+   </footer>		
+		<script>
+			var video = $("video");
+			//***********播放、暂停***********
+			 $('.btnPlay').on('click', function() {
+			   if(video[0].paused) {
+			       video[0].play();
+			       $(this).toggleClass("icon-zanting").toggleClass("icon-weibiaoti1");
+			   }else {
+			       video[0].pause();
+			       $(this).toggleClass("icon-weibiaoti1").toggleClass("icon-zanting");
+			   }
+			    return false;
+			});
+     		//***********静音效果***********
+			var flag = true; 
+        	$('.muted').on('click', function() {
+			   if(flag) {
+			       video[0].muted = true;  //true实现静音
+	      		   video[0].volume = 1; 
+	      		   flag = false;
+			       $(this).toggleClass("icon-jingyin").toggleClass("icon-yinliang");
+			   }else {
+			      video[0].muted = false;  //false不能实现静音
+			      video[0].volume = 1; 
+			      flag = true;
+			      $(this).toggleClass("icon-yinliang").toggleClass("icon-jingyin");
+			   }
+			    
+			});
+			//**********全屏功能***********
+        	$(".fullscreen").on("click",function(){
+        		video[0].webkitRequestFullScreen();       		
+        	});
+        	//***********退出全屏***********
+        	$("video").on("click",function(){
+        		video[0].webkitEnterFullScreen();      		
+        	});
+        	//***********进度条***********
+        	var allTime = video[0].duration; //获取视频总时长
+        	$(".playTime").attr({
+        		max:allTime
+        	});
+        	$(".playTime").on("input",function(){
+        		//获取到定位处的时间
+        		//console.log( $(".playTime").val());
+        		//拖动进度条的时候，把播放时间赋给当前时间
+        		video[0].currentTime = $(".playTime").val();        		
+        	});
+        	video[0].addEventListener("timeupdate",function(){
+        		setInterval(function(){
+        			var playTimer = parseInt(video[0].currentTime);
+        			console.log(playTimer);
+        			$(".playTime").val(playTimer);
+        		},1000)
+        	})
+        	//  animate动画效果
+        	$.fn.extend({
+	        	animateCss: function (animationName) {
+			        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+			        this.addClass('animated ' + animationName).one(animationEnd, function() {
+			            $(this).removeClass('animated ' + animationName);
+			        });
+			    }
+	        })
+	        	$(".btnPlay").on("click",function(){
+	        		video.animateCss("tada");
+        	})
+
+        	
+        	
+        	//addEventListener() 向指定元素添加事件
+        	//on() 被选元素及子元素上添加一个或多个事件处理程序
+        	//on()注册到jq内部   提前将事件绑定
+        	//移除事件处理程序，使用 off()  
+        	//只运行一次然后移除，使用 one() 方法
+        	//timeupdate 事件在 audio/video 的播放位置发生改变时触发
+		</script>
+	</body>
+</html>
+

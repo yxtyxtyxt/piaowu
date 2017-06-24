@@ -1,0 +1,52 @@
+
+.h_color{
+	background:#62e49e!important;
+	
+}
+.am-header-default a{
+	color: #fff!important;
+}
+.iconfont{
+	color: #fff;
+}
+img{ 
+	width: 100%;
+}
+header{
+	height: 0.88rem; 
+}
+#mySwiper{
+	height: 30vh;
+}
+#content{
+	height: calc(100vh - 108px);	
+	overflow: auto;
+}
+#list{ 
+	margin-top: 2rem;
+	overflow: auto;
+}
+#list .am-g .yp{	
+	font-weight: 700;
+	color: #535252!important;
+	height:1.5rem;
+	line-height: 1.5rem;
+	font-size: 1.3rem;
+	text-align: center!important;
+	margin: 0.7rem;
+}
+#list .am-g p:last-child{
+	height:1.3rem;
+	line-height: 1.3rem;
+	font-size: 1.1rem;
+	margin: 0.7rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: block;	
+}
+footer{
+height:59px;
+background: url(../images/img/footer.png) no-repeat ;
+background-size: 100%;	
+}

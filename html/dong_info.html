@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>动漫详情</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/dong_info.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_wu27cqb8mlutmx6r.css" />
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
+	<script src="../node_modules/amazeui-swiper/dist/amazeui.swiper.min.js"></script>
+	<script src="../iscroll-4/src/iscroll.js"></script>
+</head>
+<body>
+	  <header data-am-widget="header"
+          class="am-header am-header-default h_color">
+       	<a href="#left-link" class="">
+                <i class="iconfont icon-fanhui"></i>
+        </a>
+      <h1 class="am-header-left am-header-nav">
+      	
+          <a href="#title-link" class="t_left">
+           阴阳师
+          </a>
+      </h1>
+
+      <div class="am-header-right am-header-nav">
+      	  <a href="#right-link" class="">
+                <i class="am-header-icon am-icon-search"></i>
+          </a>
+          <a href="#right-link" class="">
+                <i class="am-header-icon am-icon-navicon"></i>
+          </a>
+      </div>
+  </header>
+  		<!--中间部分-->
+<div id="wrapper">
+	<div id="scroller">
+	  <div id="boss">
+		<div id="pulldown" class="am-hide">
+       		<i class="am-icon-spinner am-icon-pulse"></i>
+    	</div>
+		<!--标头-->
+  		<div data-am-widget="intro" class="am-intro am-cf am-intro-default" id="bg_pic">
+    		<div class="am-g am-intro-bd">
+        		<div class="am-intro-left am-u-sm-5">
+        			<img src="../images/mPic/10.jpg" alt="" />
+        		</div>
+		        <div class="am-intro-right am-u-sm-7">
+		        		
+		        </div>
+    		</div>     		
+  		</div>
+  		<!--下拉加载更多-->
+  		  <hr data-am-widget="divider" style="" class="am-divider am-divider-dashed" />
+		<span class="refresh">下拉刷新   加载最新章节</span>
+		<hr data-am-widget="divider" style="" class="am-divider am-divider-dashed" />
+		<!--选项卡-->
+		<div class="am-tabs" data-am-tabs>
+		  <ul class="am-tabs-nav am-nav am-nav-tabs">
+		    <li class="am-active"><a href="#tab1">章节</a></li>
+		    <li><a href="#tab2">详情</a></li>
+		  </ul>
+		  <div class="am-tabs-bd">
+		    <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+		    	<ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-4 am-thumbnails" id="list">
+				<!--章节-->
+			  </ul>
+		       
+		    </div>
+    		<div class="am-tab-panel am-fade" id="tab2">
+       			<!--<b>文字</b>-->
+   			</div>
+  	      </div>
+		</div>	
+		<!--加载动漫-->
+		<div class="info">
+		
+		</div>
+	  </div>
+	</div>
+</div>
+		
+   <footer>
+  		
+  </footer>
+  <script>
+		var url = "http://japi.juhe.cn/comic/chapterContent?comicName=%E5%8F%8C%E6%98%9F%E4%B9%8B%E9%98%B4%E9%98%B3%E5%B8%88&id=82950&key=10656edd8505d0431fb6e6da86319014";
+		$.ajax({
+			url:"../js/dongman.json",
+			type:"get",
+			dataType:"json",
+			data:{
+				url:url
+			}			
+		})
+		.done(function(data){
+			//console.log(data.result.comicName);
+			var title = data.result;
+			var str = `<p class="p_title">${title.comicName}</p>
+			<p class="cont">${title.baiqian}</p>
+			<p class="cont">${title.person}</p>
+			<p class="cont">${title.love}</p>
+			<p class="cont">${title.month}</p>`
+			$(".am-intro-right").html(str);
+			
+			var htm = `<b class='con'>${title.contt}</b>`
+			$("#tab2").html(htm);
+			
+			var dataArr = title.chapterList;
+			var nedd = "";
+			for(var i = 0;i < 6;i++){
+				var yName = dataArr[i].name
+				//console.log(yName);
+				nedd += `<li>
+						<a class="ya" href="#">${yName}</a>
+					</li>`						
+			}
+			$("#tab1>#list").html(nedd);	 
+
+			
+		})
+		.fail(function(){
+			console.log("error");
+		})
+		.always(function(){
+			console.log("complete");
+		})
+		
+		//回弹
+         var iscroll = new iScroll("wrapper",{
+			onScrollMove:function(argument) {
+                  if(this.y>20){
+                     $("#pulldown").removeClass('am-hide');//开关 下拉加载样式
+                     $("#pulldown").addClass('am-block');
+                     $("#pulldown span").addClass('rotateLoading') // 添加loading图旋转样式
+                  }
+            },
+            onScrollEnd:function  () { //触发 下拉刷新请求
+            	 $("#pulldown").addClass('am-hide');
+            	var url = "http://japi.juhe.cn/comic/chapterConten?comicName=%E5%8F%8C%E6%98%9F%E4%B9%8B%E9%98%B4%E9%98%B3%E5%B8%88&id=82950&key=10656edd8505d0431fb6e6da86319014";
+             	$.ajax({
+             		url:"../js/dong_info.json",
+             		type:"get",
+             		dataType:"json",
+             		data:{
+             			url:url
+             		}
+             	})
+             	.done(function(data){
+             		var uList = data.result.imageList;
+             		//console.log(uList);
+             		var pic = "";
+             		uList.forEach(function(element,index){
+             			var imge = element.imageUrl;
+             			pic += `<img src="${imge}"/>`
+             			$(".info").html(pic);
+             		})
+             		
+             		
+             	})
+             	.fail(function(){
+             		console.log("error");
+             	})
+             	.always(function(){
+             		console.log("competer");
+             	})
+            }
+            
+             
+         }); 
+			
+		
+  </script>
+</body>
+</html>
+
+		

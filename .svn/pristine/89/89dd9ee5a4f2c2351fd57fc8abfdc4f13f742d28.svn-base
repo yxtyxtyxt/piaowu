@@ -1,0 +1,130 @@
+{
+	 "error_code" : 200 ,
+	 "reason" : "请求成功！" ,
+	 "result" : {
+		 "comicName" : "双星之阴阳师" ,
+		 "chapterId" : 82950 ,
+		 "imageList" : [
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/0-ODI5NTAw.jpg" ,
+				 "id" : 1
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/1-ODI5NTAx.jpg" ,
+				 "id" : 2
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/2-ODI5NTAy.jpg" ,
+				 "id" : 3
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/3-ODI5NTAz.jpg" ,
+				 "id" : 4
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/4-ODI5NTA0.jpg" ,
+				 "id" : 5
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/5-ODI5NTA1.jpg" ,
+				 "id" : 6
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/6-ODI5NTA2.jpg" ,
+				 "id" : 7
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/7-ODI5NTA3.jpg" ,
+				 "id" : 8
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/8-ODI5NTA4.jpg" ,
+				 "id" : 9
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/9-ODI5NTA5.jpg" ,
+				 "id" : 10
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/10-ODI5NTAxMA==.jpg" ,
+				 "id" : 11
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/11-ODI5NTAxMQ==.jpg" ,
+				 "id" : 12
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/12-ODI5NTAxMg==.jpg" ,
+				 "id" : 13
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/13-ODI5NTAxMw==.jpg" ,
+				 "id" : 14
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/14-ODI5NTAxNA==.jpg" ,
+				 "id" : 15
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/15-ODI5NTAxNQ==.jpg" ,
+				 "id" : 16
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/16-ODI5NTAxNg==.jpg" ,
+				 "id" : 17
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/17-ODI5NTAxNw==.jpg" ,
+				 "id" : 18
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/18-ODI5NTAxOA==.jpg" ,
+				 "id" : 19
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/19-ODI5NTAxOQ==.jpg" ,
+				 "id" : 20
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/20-ODI5NTAyMA==.jpg" ,
+				 "id" : 21
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/21-ODI5NTAyMQ==.jpg" ,
+				 "id" : 22
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/22-ODI5NTAyMg==.jpg" ,
+				 "id" : 23
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/23-ODI5NTAyMw==.jpg" ,
+				 "id" : 24
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/24-ODI5NTAyNA==.jpg" ,
+				 "id" : 25
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/25-ODI5NTAyNQ==.jpg" ,
+				 "id" : 26
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/26-ODI5NTAyNg==.jpg" ,
+				 "id" : 27
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/27-ODI5NTAyNw==.jpg" ,
+				 "id" : 28
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/28-ODI5NTAyOA==.jpg" ,
+				 "id" : 29
+			} ,
+			 {
+				 "imageUrl" : "http://imgs.juheapi.com/comic_xin/y6vQx9au0vXR9Mqm/82950/29-ODI5NTAyOQ==.jpg" ,
+				 "id" : 30
+			}
+		]
+	}
+}
